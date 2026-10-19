@@ -1,6 +1,9 @@
 import unittest
 
-from training_control import block_indices, gate_failures, select_candidate
+try:
+    from .training_control import block_indices, gate_failures, select_candidate
+except ImportError:
+    from training_control import block_indices, gate_failures, select_candidate
 
 
 class TrainingControlTests(unittest.TestCase):
