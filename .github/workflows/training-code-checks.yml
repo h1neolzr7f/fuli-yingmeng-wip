@@ -24,3 +24,5 @@ jobs:
           node-version: "22"
       - name: Check v3 evaluator syntax
         run: node --check tools_local/v3/batch_eval3.mjs
+      - name: Smoke-test evaluator with HR3 checkpoint
+        run: node tools_local/v3/test_batch_eval3.mjs
