@@ -39,7 +39,17 @@ if (isMainThread) {
     ? JSON.parse(readFileSync(process.env.FROZEN_GAINS, "utf8")).weights.slice(320)
     : null;
   parentPort.on("message", ({ i, w }) => {
-    const ww = frozenG ? Array.from(w).slice(0, 320).concat(Array.from(frozenG)) : w;
+    let ww = w;
+    if (frozenG) {
+      const candidate = Array.from(w);
+      const frozen = Array.from(frozenG);
+      const reflexN = process.env.REFLEX === "1" ? 7 : 0;
+      const frozenGainEnd = Math.max(0, frozen.length - reflexN);
+      ww = candidate.slice(0, 320).concat(
+        frozen.slice(0, frozenGainEnd),
+        reflexN ? candidate.slice(-reflexN) : []
+      );
+    }
     const pol = F3.setParams(B, ww);
     let F = 0, K = 0, D = 0, FR = 0, DX = 0, GZ = 0, IM = 0, AL = 0;
     let H = 0, NH = 0, EDGE = 0, DANGER = 0;
