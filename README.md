@@ -135,7 +135,7 @@ Notes:
 
 1. **No-hit rate.** It is about 16% at tier 2, 30 s. The target is ≥30% before moving to 60 s episodes. HR2's fixed schedule advanced to 60 s and tier 3 too early.
 2. **Edge time.** It is 16–22%; the target is ≤15%. Ideas: a wall term inside the reflex itself, a stronger centripetal parameter, or an edge-aware TTC channel.
-3. **Stage gating.** `run_cma.py` advances stages by generation count. Add performance-gated stages, for example no-hit ≥30% on the test seeds.
+3. **Stage gating.** The updated trainer supports optional `gateNoHit` and `gateEdgeMax` thresholds and stops at the current stage when they are not met. Legacy schedules without gate thresholds still advance by generation count; see [HR3 block-wise training](docs/HR3_BLOCKWISE_TRAINING.md).
 4. **Reflex v2.** Ideas:
    - Directional looming per move direction, predicting the fly's own motion rather than assuming it is stationary.
    - A graded veto.
@@ -145,7 +145,7 @@ Notes:
 7. **Repo hygiene.**
    - The POV renderer (`/workspace/pov/render_*.py`) is not in this repo yet.
    - `tools_local/expert/check.mjs` only applies `REFLEX`; it ignores `FOCUS`.
-   - The `out/*.json` CMA states are resumable only with matching `NGAINS`.
+   - CMA state files restore the stage and candidate mean, not pycma's full covariance state. Match `NGAINS`, `BLOCK`, and the original warm checkpoint when resuming; block-wise runs record a warm-checkpoint hash.
 
 ## 7. 内容说明 / What's included
 
