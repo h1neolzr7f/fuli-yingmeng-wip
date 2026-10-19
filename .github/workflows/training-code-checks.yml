@@ -1,0 +1,28 @@
+name: Training code checks
+
+on:
+  push:
+    branches:
+      - main
+      - agent/hr3-gated-training-20261019
+  pull_request:
+
+jobs:
+  training-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile trainer and test helpers
+        run: |
+          python -m py_compile tools_local/cma/run_cma.py tools_local/cma/training_control.py tools_local/cma/test_training_control.py
+          python -m unittest tools_local.cma.test_training_control
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check v3 evaluator syntax
+        run: node --check tools_local/v3/batch_eval3.mjs
+      - name: Smoke-test evaluator with HR3 checkpoint
+        run: node tools_local/v3/test_batch_eval3.mjs
