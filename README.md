@@ -168,3 +168,8 @@ Notes:
 ## License
 
 MIT. The original `LICENSE` © 2026 leimi is kept. Upstream: https://github.com/w13630039663-bit/fly-touhou. Connectome data © FlyEM / Janelia (MaleCNS v1.0); please cite them.
+
+
+## 8. Training improvements (2026-10-19)
+
+The safer block-wise CMA trainer, objective-aligned stage selection, no-hit/edge metrics, and performance-gated curriculum are documented in [HR3 block-wise training](docs/HR3_BLOCKWISE_TRAINING.md). The guide includes a recommended HR3 continuation command and unit-test instructions.
