@@ -43,12 +43,17 @@ if (isMainThread) {
     if (frozenG) {
       const candidate = Array.from(w);
       const frozen = Array.from(frozenG);
-      const reflexN = process.env.REFLEX === "1" ? 7 : 0;
-      const frozenGainEnd = Math.max(0, frozen.length - reflexN);
-      ww = candidate.slice(0, 320).concat(
-        frozen.slice(0, frozenGainEnd),
-        reflexN ? candidate.slice(-reflexN) : []
-      );
+      const hasCandidateReflex = process.env.REFLEX === "1" &&
+        candidate.length >= 320 + F3.NG3 + 7;
+      if (hasCandidateReflex) {
+        ww = candidate.slice(0, 320).concat(
+          frozen.slice(0, F3.NG3),
+          candidate.slice(320 + F3.NG3, 320 + F3.NG3 + 7)
+        );
+      } else {
+        // A readout-only candidate has no reflex tail; preserve the entire frozen suffix.
+        ww = candidate.slice(0, 320).concat(frozen);
+      }
     }
     const pol = F3.setParams(B, ww);
     let F = 0, K = 0, D = 0, FR = 0, DX = 0, GZ = 0, IM = 0, AL = 0;
