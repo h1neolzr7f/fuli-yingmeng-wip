@@ -1,0 +1,63 @@
+/workspace/fly-touhou-repo/tools_local/venv/lib/python3.13/site-packages/cma/s.py:17: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+17:23:29 t1 gen 0 bestfit 1229 kills 0/30 dmg 210 frames 1490 |dx| 96 aligned 166 graze 66.9 imse 0.000 sigma 0.050
+17:27:52 t1 gen 5 bestfit 851 kills 0/30 dmg 225 frames 1370 |dx| 87 aligned 177 graze 53.4 imse 0.000 sigma 0.055
+17:32:19 t1 gen 10 bestfit 1150 kills 0/30 dmg 236 frames 1523 |dx| 98 aligned 186 graze 58.1 imse 0.000 sigma 0.055
+17:36:36 t1 gen 15 bestfit -324 kills 0/30 dmg 222 frames 1373 |dx| 93 aligned 182 graze 59.1 imse 0.000 sigma 0.054
+17:40:59 t1 gen 20 bestfit 310 kills 0/30 dmg 261 frames 1430 |dx| 95 aligned 207 graze 46.9 imse 0.000 sigma 0.052
+17:45:34 t1 gen 25 bestfit 1088 kills 0/30 dmg 264 frames 1566 |dx| 97 aligned 199 graze 58.1 imse 0.000 sigma 0.051
+17:50:06 t1 gen 30 bestfit 1374 kills 0/30 dmg 262 frames 1460 |dx| 87 aligned 200 graze 47.6 imse 0.000 sigma 0.052
+17:54:45 t1 gen 35 bestfit 1371 kills 0/30 dmg 242 frames 1491 |dx| 105 aligned 189 graze 52.2 imse 0.000 sigma 0.055
+17:59:34 t1 gen 40 bestfit 2273 kills 0/30 dmg 210 frames 1525 |dx| 99 aligned 172 graze 50.1 imse 0.000 sigma 0.055
+18:04:17 t1 gen 45 bestfit 1270 kills 0/30 dmg 167 frames 1484 |dx| 108 aligned 144 graze 47.8 imse 0.000 sigma 0.052
+18:09:14 t1 gen 50 bestfit 2478 kills 0/30 dmg 249 frames 1596 |dx| 94 aligned 228 graze 53.1 imse 0.000 sigma 0.051
+18:14:10 t1 gen 55 bestfit 1947 kills 0/30 dmg 248 frames 1571 |dx| 91 aligned 233 graze 51.6 imse 0.000 sigma 0.051
+18:19:02 t1 gen 60 bestfit 1805 kills 0/30 dmg 253 frames 1582 |dx| 89 aligned 230 graze 63.9 imse 0.000 sigma 0.051
+18:23:56 t1 gen 65 bestfit 2744 kills 0/30 dmg 220 frames 1640 |dx| 94 aligned 185 graze 57.4 imse 0.000 sigma 0.049
+18:28:42 t1 gen 70 bestfit 2299 kills 0/30 dmg 209 frames 1526 |dx| 92 aligned 185 graze 47.9 imse 0.000 sigma 0.044
+18:33:21 t1 gen 75 bestfit 2950 kills 0/30 dmg 161 frames 1519 |dx| 121 aligned 136 graze 49.4 imse 0.000 sigma 0.041
+18:37:08 t1 gen 79 bestfit 1658 kills 0/30 dmg 222 frames 1387 |dx| 92 aligned 184 graze 48.1 imse 0.000 sigma 0.039
+18:37:33 STAGE_END t1 mean kills/200 0 dmg 268 surv 1579 |dx| 82 graze 54.8 imse 0.000 | best kills/200 0 dmg 247 surv 1536 |dx| 86 graze 53.8 imse 0.000
+18:38:29 t2 gen 0 bestfit 377 kills 0/30 dmg 261 frames 1349 |dx| 77 aligned 200 graze 61.7 imse 0.000 sigma 0.049
+18:43:07 t2 gen 5 bestfit -317 kills 0/30 dmg 257 frames 1334 |dx| 78 aligned 205 graze 57.9 imse 0.000 sigma 0.050
+18:47:55 t2 gen 10 bestfit 939 kills 0/30 dmg 247 frames 1387 |dx| 94 aligned 185 graze 58.7 imse 0.000 sigma 0.047
+18:52:29 t2 gen 15 bestfit 858 kills 0/30 dmg 230 frames 1474 |dx| 93 aligned 184 graze 67.5 imse 0.000 sigma 0.047
+18:57:11 t2 gen 20 bestfit -86 kills 0/30 dmg 206 frames 1433 |dx| 84 aligned 184 graze 65.0 imse 0.000 sigma 0.047
+19:07:41 t2 gen 25 bestfit 838 kills 0/30 dmg 247 frames 1427 |dx| 86 aligned 207 graze 56.9 imse 0.000 sigma 0.046
+19:18:28 t2 gen 30 bestfit 261 kills 0/30 dmg 212 frames 1473 |dx| 101 aligned 173 graze 63.3 imse 0.000 sigma 0.045
+19:23:27 t2 gen 35 bestfit 820 kills 0/30 dmg 236 frames 1453 |dx| 86 aligned 192 graze 62.7 imse 0.000 sigma 0.045
+19:28:37 t2 gen 40 bestfit 929 kills 0/30 dmg 145 frames 1470 |dx| 157 aligned 114 graze 60.5 imse 0.000 sigma 0.047
+19:33:38 t2 gen 45 bestfit -332 kills 0/30 dmg 212 frames 1447 |dx| 93 aligned 172 graze 66.2 imse 0.000 sigma 0.047
+19:44:52 t2 gen 50 bestfit 905 kills 0/30 dmg 256 frames 1450 |dx| 81 aligned 208 graze 61.4 imse 0.000 sigma 0.047
+19:58:44 t2 gen 55 bestfit 649 kills 0/30 dmg 227 frames 1468 |dx| 112 aligned 199 graze 76.8 imse 0.000 sigma 0.046
+20:09:42 t2 gen 60 bestfit 39 kills 0/30 dmg 223 frames 1337 |dx| 93 aligned 191 graze 64.2 imse 0.000 sigma 0.046
+20:15:01 t2 gen 65 bestfit 421 kills 0/30 dmg 245 frames 1516 |dx| 82 aligned 215 graze 68.5 imse 0.000 sigma 0.045
+20:20:17 t2 gen 70 bestfit 1030 kills 0/30 dmg 216 frames 1431 |dx| 88 aligned 182 graze 64.1 imse 0.000 sigma 0.046
+20:34:12 t2 gen 75 bestfit 623 kills 0/30 dmg 210 frames 1424 |dx| 96 aligned 187 graze 72.3 imse 0.000 sigma 0.042
+20:48:05 t2 gen 80 bestfit 1054 kills 0/30 dmg 243 frames 1561 |dx| 103 aligned 197 graze 73.3 imse 0.000 sigma 0.041
+20:57:19 t2 gen 85 bestfit -556 kills 0/30 dmg 200 frames 1391 |dx| 115 aligned 176 graze 68.7 imse 0.000 sigma 0.041
+21:02:15 t2 gen 90 bestfit -460 kills 0/30 dmg 263 frames 1409 |dx| 87 aligned 224 graze 63.8 imse 0.000 sigma 0.045
+21:07:09 t2 gen 95 bestfit -42 kills 0/30 dmg 201 frames 1441 |dx| 87 aligned 193 graze 67.6 imse 0.000 sigma 0.045
+21:12:13 t2 gen 100 bestfit -615 kills 0/30 dmg 227 frames 1325 |dx| 90 aligned 199 graze 58.6 imse 0.000 sigma 0.040
+21:17:27 t2 gen 105 bestfit 385 kills 0/30 dmg 210 frames 1486 |dx| 97 aligned 171 graze 67.4 imse 0.000 sigma 0.037
+21:22:42 t2 gen 110 bestfit 505 kills 0/30 dmg 268 frames 1489 |dx| 82 aligned 236 graze 71.8 imse 0.000 sigma 0.038
+21:27:45 t2 gen 115 bestfit 143 kills 0/30 dmg 158 frames 1331 |dx| 108 aligned 151 graze 59.5 imse 0.000 sigma 0.037
+21:32:49 t2 gen 120 bestfit 1167 kills 0/30 dmg 249 frames 1510 |dx| 89 aligned 223 graze 64.9 imse 0.000 sigma 0.034
+21:37:52 t2 gen 125 bestfit 212 kills 0/30 dmg 220 frames 1447 |dx| 84 aligned 193 graze 69.4 imse 0.000 sigma 0.033
+21:43:05 t2 gen 130 bestfit 1136 kills 0/30 dmg 161 frames 1424 |dx| 112 aligned 161 graze 65.2 imse 0.000 sigma 0.032
+21:48:06 t2 gen 135 bestfit 1281 kills 0/30 dmg 201 frames 1433 |dx| 129 aligned 138 graze 67.8 imse 0.000 sigma 0.032
+21:53:14 t2 gen 140 bestfit 50 kills 0/30 dmg 231 frames 1448 |dx| 90 aligned 184 graze 69.0 imse 0.000 sigma 0.033
+21:58:37 t2 gen 145 bestfit 1407 kills 0/30 dmg 232 frames 1477 |dx| 85 aligned 192 graze 65.3 imse 0.000 sigma 0.033
+22:03:57 t2 gen 150 bestfit 1630 kills 0/30 dmg 178 frames 1508 |dx| 110 aligned 150 graze 66.3 imse 0.000 sigma 0.033
+22:09:25 t2 gen 155 bestfit 843 kills 0/30 dmg 267 frames 1548 |dx| 84 aligned 233 graze 71.1 imse 0.000 sigma 0.032
+22:15:43 t2 gen 160 bestfit 1523 kills 0/30 dmg 232 frames 1630 |dx| 85 aligned 215 graze 70.3 imse 0.000 sigma 0.031
+22:25:52 t2 gen 165 bestfit 959 kills 0/30 dmg 250 frames 1498 |dx| 82 aligned 207 graze 67.3 imse 0.000 sigma 0.032
+22:39:30 t2 gen 170 bestfit 1230 kills 0/30 dmg 212 frames 1478 |dx| 92 aligned 169 graze 67.9 imse 0.000 sigma 0.034
+22:46:17 t2 gen 175 bestfit 997 kills 0/30 dmg 211 frames 1446 |dx| 109 aligned 171 graze 62.4 imse 0.000 sigma 0.034
+22:58:25 t2 gen 180 bestfit -5 kills 0/30 dmg 235 frames 1478 |dx| 82 aligned 203 graze 76.1 imse 0.000 sigma 0.031
+23:08:56 t2 gen 185 bestfit 630 kills 0/30 dmg 205 frames 1427 |dx| 118 aligned 176 graze 69.8 imse 0.000 sigma 0.029
+23:14:14 t2 gen 190 bestfit 1383 kills 0/30 dmg 252 frames 1452 |dx| 86 aligned 216 graze 62.9 imse 0.000 sigma 0.028
+23:19:50 t2 gen 195 bestfit -97 kills 0/30 dmg 260 frames 1414 |dx| 91 aligned 204 graze 67.2 imse 0.000 sigma 0.030
+23:24:42 t2 gen 199 bestfit 176 kills 0/30 dmg 210 frames 1501 |dx| 111 aligned 183 graze 75.4 imse 0.000 sigma 0.031
+23:25:11 STAGE_END t2 mean kills/200 0 dmg 224 surv 1505 |dx| 95 graze 66.8 imse 0.000 | best kills/200 0 dmg 226 surv 1471 |dx| 88 graze 60.9 imse 0.000
+23:25:11 DONE

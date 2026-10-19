@@ -1,0 +1,19 @@
+/workspace/fly-touhou-repo/tools_local/venv/lib/python3.13/site-packages/cma/s.py:17: UserWarning: Could not import matplotlib.pyplot, therefore ``cma.plot()`` etc. is not available
+  _warnings.warn('Could not import matplotlib.pyplot, therefore'
+08:43:04 t2 gen 0 bestfit -1112 kills 0/30 dmg 175 frames 965 |dx| 79 aligned 136 graze 42.5 imse 0.000 sigma 0.051
+08:48:05 t2 gen 5 bestfit -1138 kills 0/30 dmg 188 frames 890 |dx| 75 aligned 140 graze 45.1 imse 0.000 sigma 0.051
+08:53:13 t2 gen 10 bestfit -1269 kills 0/30 dmg 204 frames 1009 |dx| 67 aligned 165 graze 55.1 imse 0.000 sigma 0.050
+08:58:26 t2 gen 15 bestfit -660 kills 0/30 dmg 224 frames 1107 |dx| 78 aligned 167 graze 56.9 imse 0.000 sigma 0.048
+09:03:48 t2 gen 20 bestfit -698 kills 0/30 dmg 132 frames 1092 |dx| 110 aligned 94 graze 55.1 imse 0.000 sigma 0.046
+09:09:09 t2 gen 25 bestfit -877 kills 0/30 dmg 180 frames 1095 |dx| 90 aligned 144 graze 47.7 imse 0.000 sigma 0.046
+09:14:27 t2 gen 30 bestfit -948 kills 0/30 dmg 157 frames 1097 |dx| 111 aligned 118 graze 50.7 imse 0.000 sigma 0.043
+09:19:57 t2 gen 35 bestfit -834 kills 0/30 dmg 200 frames 1113 |dx| 97 aligned 151 graze 54.6 imse 0.000 sigma 0.041
+09:25:54 t2 gen 40 bestfit -635 kills 0/30 dmg 147 frames 1061 |dx| 108 aligned 119 graze 50.1 imse 0.000 sigma 0.039
+09:31:24 t2 gen 45 bestfit -516 kills 0/30 dmg 153 frames 1138 |dx| 108 aligned 122 graze 58.3 imse 0.000 sigma 0.039
+09:36:46 t2 gen 50 bestfit -1229 kills 0/30 dmg 147 frames 1098 |dx| 93 aligned 114 graze 52.9 imse 0.000 sigma 0.037
+09:42:47 t2 gen 55 bestfit -901 kills 0/30 dmg 192 frames 1050 |dx| 82 aligned 147 graze 47.8 imse 0.000 sigma 0.035
+09:48:41 t2 gen 60 bestfit -633 kills 0/30 dmg 161 frames 1098 |dx| 86 aligned 126 graze 57.6 imse 0.000 sigma 0.034
+09:54:26 t2 gen 65 bestfit -1231 kills 0/30 dmg 183 frames 1126 |dx| 91 aligned 153 graze 57.7 imse 0.000 sigma 0.032
+10:00:15 t2 gen 70 bestfit -672 kills 0/30 dmg 153 frames 1083 |dx| 90 aligned 123 graze 52.3 imse 0.000 sigma 0.032
+10:06:05 t2 gen 75 bestfit -1228 kills 0/30 dmg 148 frames 1013 |dx| 87 aligned 117 graze 54.0 imse 0.000 sigma 0.033
+10:11:41 t2 gen 80 bestfit -984 kills 0/30 dmg 151 frames 1013 |dx| 93 aligned 118 graze 57.5 imse 0.000 sigma 0.033

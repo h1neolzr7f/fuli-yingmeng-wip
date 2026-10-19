@@ -1,0 +1,13 @@
+import puppeteer from 'puppeteer-core'; import fs from 'fs';
+const [url,outDir,n]=[process.argv[2],process.argv[3],+process.argv[4]];
+const b=await puppeteer.launch({executablePath:'/usr/bin/google-chrome',headless:'new',args:['--no-sandbox']});
+const p=await b.newPage(); await p.setViewport({width:1600,height:1400});
+await p.goto(url,{waitUntil:'networkidle0'}); await new Promise(r=>setTimeout(r,3000));
+const r=await p.evaluate(()=>{let best=null,a=0;for(const c of document.querySelectorAll('canvas')){const q=c.getBoundingClientRect();if(q.height>q.width&&q.width*q.height>a){a=q.width*q.height;best=q}}return {x:best.x+scrollX,y:best.y+scrollY,w:best.width,h:best.height}});
+await p.evaluate(()=>{for(const e of document.querySelectorAll('body *')){const ps=getComputedStyle(e).position;if((ps==='sticky'||ps==='fixed')&&!e.querySelector('canvas')&&e.tagName!=='CANVAS')e.style.visibility='hidden'}});
+await p.evaluate(y=>scrollTo(0,y-20),r.y); await new Promise(r=>setTimeout(r,500));
+const cdp=await p.target().createCDPSession(); let i=0; fs.mkdirSync(outDir,{recursive:true});
+await cdp.send('Page.startScreencast',{format:'jpeg',quality:90});
+await new Promise(res=>cdp.on('Page.screencastFrame',f=>{cdp.send('Page.screencastFrameAck',{sessionId:f.sessionId}).catch(()=>{});if(i<n){fs.writeFileSync(`${outDir}/f${String(i).padStart(5,'0')}.jpg`,Buffer.from(f.data,'base64'));i++}if(i>=n)res()}));
+console.log('stats',JSON.stringify(await p.evaluate(()=>({score:window.__game.player.score,hp:window.__game.boss.hp,kills:window.__kills,deaths:window.__deaths||0}))));
+await b.close();

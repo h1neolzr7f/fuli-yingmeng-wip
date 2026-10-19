@@ -1,0 +1,69 @@
+{
+  "dataset": "FlyEM MaleCNS v1.0, min confidence 0.5, traced-only (slim LC + compact MB)",
+  "license": "CC BY 4.0",
+  "source": "https://male-cns.janelia.org/download/",
+  "nodes": 2000,
+  "edges": 32163,
+  "synapticContacts": 447359,
+  "inputCells": 162,
+  "readoutCells": 16,
+  "graphFile": "graphSlim2kMB.json",
+  "graphSha256": "07910ddffbf46bd3cecdda39283bac7f335326f066ff9758b0c57784dd38f084",
+  "channels": [
+    "LC4",
+    "LC11",
+    "LC9",
+    "LC15",
+    "LC16",
+    "LC17",
+    "LC21",
+    "LPLC2"
+  ],
+  "roleCounts": {
+    "interneuron": 1822,
+    "output": 16,
+    "input": 162
+  },
+  "ntCounts": {
+    "acetylcholine": 1446,
+    "gaba": 62,
+    "glutamate": 164,
+    "dopamine": 325,
+    "unclear": 3
+  },
+  "typeCount": 231,
+  "reward": {
+    "danCount": 326,
+    "mbonCount": 91,
+    "kcCount": 450,
+    "aplDpmCount": 4
+  },
+  "selection": {
+    "visual": 955,
+    "dns": 56,
+    "bridges": 120,
+    "kcs": 450,
+    "mbMods": 419,
+    "nPerChannel": 20,
+    "bridgeCap": 120,
+    "dnExtraCap": 40,
+    "kcSample": 450
+  },
+  "normalisation": "additive two-segment (graph600a lesson): per-post, edges from channel input cells normalised to sum|w|=1; all other edges to sum|w|=alpha (alpha=1.0). Protects LC\u2192DN drive from bridge/MB dilution.",
+  "assumptions": "Engineered 8-channel input injection; signed leaky tanh rate units; ACh +1, GABA/Glu -1, modulatory/unknown 0. Additive two-segment weights. Not a physiological whole-brain model.",
+  "sources": {
+    "annotations": "2177e246113e4cfbf1e7772ec37c6da1955ff22e8063d0b1f833101f99a9a3b2",
+    "neurotransmitters": "95c9289220663abeb3409f3ad9e5a7f8a53f8093f5139d15502cd08da8879621",
+    "edgesTracedOnly": "9b3beab17bad5f618be3f2c02d3139a8d07b822565919c013f1e5506d93e604b"
+  },
+  "estimatedUsPerFrame": 156.3,
+  "vs80neuron": {
+    "v1UsPerFrame": 8.2,
+    "edgeRatio": 24.82,
+    "speedupFactorSlower": 19.1
+  },
+  "measuredUsPerFrame": 1495.2,
+  "measuredUsPerFrame80SameHost": 24.7,
+  "measuredSlowerVs80": 60.5,
+  "noteSpeed": "Absolute \u00b5s measured 2026-10-17 on box under concurrent CEM load; ratio vs 80-neuron on same host is the fair comparison. Historical HANDOVER v1=8.2\u00b5s / v600=183.6\u00b5s were on a quieter host."
+}

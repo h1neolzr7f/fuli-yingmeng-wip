@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8"><base href="/"><style>body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="460" height="580" style="display:none"></canvas><canvas id="o" width="460" height="616"></canvas>
+<script type="module">
+import { MaleCNSConnectome } from '/src/brain/connectome.js';
+import { ReadoutPolicy } from '/src/brain/policy.js';
+import { DanmakuGame } from '/src/game/danmaku.js';
+const q=new URLSearchParams(location.search);
+const seed=+q.get('seed'), ck=q.get('ck'), cap=q.get('cap')||'';
+const g=await (await fetch('/public/data/connectome/graph.json')).json();
+const w=(await (await fetch('/'+ck)).json()).weights;
+const brain=new MaleCNSConnectome(g); const pol=new ReadoutPolicy(Float64Array.from(w)); brain.reset();
+const canvas=document.getElementById('c');
+const game=new DanmakuGame(canvas,{width:460,height:580,seed,fixedMult:1.4,bossVision:true,freeMove:true});
+game.muteAudio=true; if(q.get('eob')==='1')game.endOnBossDefeat=true;
+game.setSpellcard(seed%5);Object.assign(game.player,{lives:3,maxLives:3,autoRespawn:false,invulnerableTimer:0});
+let f=0,kf=0;
+const oc=document.getElementById('o');
+function overlay(extra){const c=oc.getContext('2d');c.save();c.fillStyle='#000';c.fillRect(0,0,460,616);c.drawImage(canvas,0,0);c.fillStyle='#111827';c.fillRect(0,580,460,36);
+ c.font='12px "Noto Sans CJK SC","Noto Sans",sans-serif';c.fillStyle='#fde68a';c.textAlign='left';
+ c.fillText(cap,8,595);c.fillStyle='#e5e7eb';c.fillText(`t=${(f/60).toFixed(1)}s  Boss HP ${Math.round(game.boss.hp)}/${game.boss.maxHp}  lives ${game.player.lives}${extra?'  '+extra:''}`,8,610);c.restore();}
+window.__ready=async()=>{const t0=Date.now();while(Date.now()-t0<5000&&!(game.bossImageLoaded&&game.cirnoImageLoaded&&game.etamaImageLoaded&&game.remiliaImageLoaded))await new Promise(r=>setTimeout(r,50));
+ return {imgs:[game.bossImageLoaded,game.cirnoImageLoaded,game.etamaImageLoaded,game.remiliaImageLoaded]};};
+// advance one sim frame and render; returns jpeg data url
+window.__step=()=>{if(!game.player.isDead&&f<1800&&!(kf>0&&q.get('eob')==='1')){game.update(pol.forward(brain.step(game.getBiologicalSensoryInput(),false)));f++;if(game.boss.hp<=0&&!kf)kf=f;}
+ game.render(); const done=game.player.isDead||f>=1800||(kf>0&&q.get('eob')==='1');
+ overlay(done?(game.boss.hp<=0?'BOSS KILLED':(game.player.isDead?'— fly died (no clear)':'time limit')):(kf?'BOSS KILLED':''));
+ return {img:oc.toDataURL('image/jpeg',0.92),f,done,score:game.player.score,hp:game.boss.hp,graze:game.player.graze,kf};};
+window.__readyFlag=true;
+</script></body></html>
