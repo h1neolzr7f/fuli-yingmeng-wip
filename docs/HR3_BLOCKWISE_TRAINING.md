@@ -14,12 +14,11 @@ This guide documents a safer next experiment for the 2026-10-19 HR3 checkpoint. 
 Run from the repository root after installing the dependencies. Use a **new TAG** so the HR3 state remains untouched:
 
 ```bash
-R='"survive":1,"strict":1,"HW":1500,"GW":1,"GCAP":300,"EW":3,"NHB":15000,"lives":3,"repeat":4,"cards":5'
 REFLEX=1 EVAL=tools_local/v3/batch_eval3.mjs \
-  BLOCK=readout_reflex \
-  STAGES="[[\"t2_readout_reflex\",120,{\"mult\":1.6,\"tier\":2,\"maxF\":1800,$R,\"gateNoHit\":0.30,\"gateEdgeMax\":0.15}]]" \
-  POP=32 NSEEDS=24 TESTN=300 SIG0=0.03 NGAINS=8859 \
-  tools_local/venv/bin/python tools_local/cma/run_cma.py HR3_RF checkpoints_key/HR3_latest.json 12345 8
+BLOCK=readout_reflex \
+STAGES='[["t2_readout_reflex",120,{"mult":1.6,"tier":2,"maxF":1800,"survive":1,"strict":1,"HW":1500,"GW":1,"GCAP":300,"EW":3,"NHB":15000,"lives":3,"repeat":4,"cards":5,"gateNoHit":0.30,"gateEdgeMax":0.15}]]' \
+POP=32 NSEEDS=24 TESTN=300 SIG0=0.03 NGAINS=8859 \
+tools_local/venv/bin/python tools_local/cma/run_cma.py HR3_RF checkpoints_key/HR3_latest.json 12345 8
 ```
 
 The gate thresholds are evaluated on held-out seeds: at least 30% no-hit episodes and at most 15% edge time. If the gate fails, the run stops and records the reason in `out/cma_HR3_RF_state.json`. Re-run the same command and TAG to continue the current stage; use a new TAG and the generated full checkpoint as the warm start if you want a clean, separate experiment.
